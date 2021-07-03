@@ -12,6 +12,7 @@ type Playlist struct {
 	Items                 []Item
 	Version               *int
 	Cache                 *bool
+	PlaybackStart         *PlaybackStart
 	Target                int
 	Sequence              int
 	DiscontinuitySequence *int

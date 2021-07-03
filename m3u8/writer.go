@@ -46,6 +46,10 @@ func writeHeader(sb *strings.Builder, pl *Playlist) {
 		writeCacheTag(sb, pl.Cache)
 		sb.WriteString(fmt.Sprintf("%s:%v", TargetDurationTag, pl.Target))
 		sb.WriteRune('\n')
+		if pl.PlaybackStart != nil {
+			sb.WriteString(pl.PlaybackStart.String())
+			sb.WriteRune('\n')
+		}
 	}
 }
 
