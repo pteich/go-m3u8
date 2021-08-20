@@ -139,7 +139,7 @@ func (pi *PlaylistItem) String() string {
 		return fmt.Sprintf(`%s:%s,%s="%s"`, PlaylistIframeTag, attributesString, URITag, pi.URI)
 	}
 
-	return fmt.Sprintf("%s:%s\n", PlaylistItemTag, attributesString)+pi.URI
+	return fmt.Sprintf("%s:%s\n%s", PlaylistItemTag, attributesString,pi.URI)
 }
 
 // CodecsString returns the string representation of codecs for a playlist item
